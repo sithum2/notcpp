@@ -1,3 +1,5 @@
+// this will count the number of item's in the vector the_list
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
