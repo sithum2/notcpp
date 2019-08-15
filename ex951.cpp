@@ -32,5 +32,22 @@ int main(int argc, char **argv)
 	cout << accum(nums) << endl;
 	cout << sum(nums)   << endl;
 
+	for(auto &i : {4,5,56,7,7})
+		cout << i << " ";
+
+	vector<int> more_nums;
+	
+	for(int i; cin >> i;)
+		more_nums.push_back(i);
+
+
+	cout << endl;
+
+	for(auto &i : more_nums)
+		cout << i << ((i != *(--more_nums.end())) ? " + " : " = ");
+
+	cout << sum(more_nums) << endl;
+
+
 	return 0;
 }
