@@ -5,12 +5,13 @@ using namespace std;
 
 template
 <typename Iter, typename Value>
-Iter find_it(Iter beg, Iter end, const Value &v)
+size_t find_it(Iter beg, Iter end, const Value &v)
 {
+	auto old_beg = beg;
 	while(beg != end && *beg != v)
 		++beg;
 
-	return beg;
+	return beg - old_beg;
 }
 
 int main(int argc, char **argv)
@@ -19,11 +20,9 @@ int main(int argc, char **argv)
 
 	int n = 3;
 
-	auto i = find_it(nums.begin(), nums.end(), n);
-
-	if(i != nums.end())
+	if(size_t i = find_it(nums.begin(), nums.end(), n))
 	{
-		cout <<  n << " found " << " at index " << i - nums.begin() << endl;
+		cout <<  n << " found " << " at index " << i << endl;
 	}else
 	{
 		cout << "number not found" << endl;
