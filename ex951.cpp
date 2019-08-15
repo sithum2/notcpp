@@ -47,10 +47,12 @@ int main(int argc, char **argv)
 		cout << i << ((i != *(--more_nums.end())) ? " + " : " = ");
 
 	cout << sum(more_nums) << endl;
-
+/*
 	for(;;)
 	{		//this loop runs forever until terminated
 	}
+*/
+	cout << "cool cookies" << endl;
 
 
 	return 0;
