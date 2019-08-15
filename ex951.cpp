@@ -48,6 +48,10 @@ int main(int argc, char **argv)
 
 	cout << sum(more_nums) << endl;
 
+	for(;;)
+	{		//this loop runs forever until terminated
+	}
+
 
 	return 0;
 }
