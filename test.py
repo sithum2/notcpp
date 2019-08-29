@@ -40,10 +40,15 @@ class Solution():
 			prev_l1 = list1
 			list1 = list1.next
 			prev_l1.next = list2
-			return (self, list1_beg, list2_beg
+			list2_beg = prev_l1
+			return merge_help_rec(self, list1_beg, list2_beg,prev_l1,list1,prev_l2,list2)
+		else:  //list2.val <= list2.val
+			prev_l2 = list2
+			list2 = list2.next
+			prev_l2.next = list1
+			list1_beg = prev_l2
+			return merge_help_rec(self, list1_beg, list2_beg,prev_l1,list1,prev_l2,list2)
 			
-		
-
 	def merge_rec(self, list1, list2):
 		if(list1 == None):
 			return list2
