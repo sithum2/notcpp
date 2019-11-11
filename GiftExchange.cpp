@@ -92,8 +92,8 @@ int main(int argc, char **argv)
 	char date_time[100];
 
 	std::tm holder;     //for thread-safe behavior
-	//localtime_s(&holder, &now);
-	localtime_s(&now, &holder);
+	localtime_s(&holder, &now);
+	//localtime_s(&now, &holder);
 
 	strftime(date_time, sizeof(date_time), "%Y_%b_%d_%H_%M_%S", &holder);
 
