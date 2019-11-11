@@ -1,0 +1,5 @@
+Error: Even number of names required 
+ list:
+ Naomi Mary Harvey Henry Ella Liz Claudia Essie Charlie James George 
+ has an odd number of names (11)
+ please add or delete names until there are an even number of names to proceed with gift-exchange 
